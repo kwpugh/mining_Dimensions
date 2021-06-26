@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.kwpugh.mining_dims.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "ZombieEntityMixin",
+    "PiglinEntityMixin",
+    "PiglinBruteEntityMixin",
+    "VexEntityMixin",
+    "AbstractSkeletonEntityMixin",
+    "WitherSkeletonEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

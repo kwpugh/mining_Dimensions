@@ -1,0 +1,9 @@
+{
+  "block": "minecraft:cobblestone",
+  "dim": "mining_dims:mining_dim",
+  "ignitionType": "ITEM",
+  "ignitionSource": "minecraft:flint_and_steel",
+  "r": 50,
+  "g": 133,
+  "b": 168
+}

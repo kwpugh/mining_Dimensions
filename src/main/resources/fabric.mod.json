@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "mining_dims",
+  "version": "${version}",
+
+  "name": "Mining Dimensions",
+  "description": "Providing a few worlds for resources",
+  "authors": [
+    "Kevin Pugh"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mining-dimensions-fabric",
+    "issues": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kwpugh.mining_dims.MiningDims"
+    ]
+  },
+  "mixins": [
+    "mining_dims.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "java": ">=16",
+    "minecraft": "1.17.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
