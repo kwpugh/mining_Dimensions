@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    " C ",
+    "BCB",
+    " A "
+  ],
+
+  "key":
+  {
+    "A":
+    {
+      "item": "minecraft:stick"
+    },
+    "B":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "C":
+    {
+      "item": "minecraft:emerald"
+    }
+  },
+
+  "result":
+  {
+    "item": "mining_dims:hunting_teleporter",
+    "count": 1
+  }
+}

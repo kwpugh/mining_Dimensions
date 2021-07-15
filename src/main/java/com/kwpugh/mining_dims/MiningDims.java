@@ -1,8 +1,9 @@
 package com.kwpugh.mining_dims;
 
+import com.kwpugh.mining_dims.config.MiningDimsConfig;
+import com.kwpugh.mining_dims.init.ItemInit;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
@@ -10,7 +11,6 @@ import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 public class MiningDims implements ModInitializer
 {
 	public static final String MOD_ID = "mining_dims";
-    public static final MiningDims INSTANCE = new MiningDims();
 
     public static final Identifier MOD_DIMENSION_ID = new Identifier(MiningDims.MOD_ID, "mining_dim");
     public static final Identifier MOD_DIMENSION2_ID = new Identifier(MiningDims.MOD_ID, "hunting_dim");
@@ -24,5 +24,6 @@ public class MiningDims implements ModInitializer
     {
         PortalInit.registerPortal();
         MiningDimsRegistry.setupDimension();
+        ItemInit.init();
     }	
 }
