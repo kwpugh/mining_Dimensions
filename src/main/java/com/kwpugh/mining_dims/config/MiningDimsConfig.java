@@ -17,10 +17,10 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
                 + "***********************"
                 + "\nPortals"
                 + "\n***********************")
-        public boolean enableMining = true;
-        public boolean enableHunting = true;
-        public boolean enableCaving = true;
-        public boolean enableNethering = true;
+        public boolean enableMiningPortal = true;
+        public boolean enableHuntingPortal = true;
+        public boolean enableCavingPortal = true;
+        public boolean enableNetheringPortal = true;
 
         @Comment("\n"
                 + "\n"

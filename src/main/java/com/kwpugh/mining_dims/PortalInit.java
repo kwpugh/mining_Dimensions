@@ -8,10 +8,10 @@ import net.minecraft.util.Identifier;
 
 public class PortalInit
 {
-	static boolean mining = MiningDims.CONFIG.GENERAL.enableMining;
-	static boolean hunting = MiningDims.CONFIG.GENERAL.enableHunting;
-	static boolean caving = MiningDims.CONFIG.GENERAL.enableCaving;
-	static boolean nethering = MiningDims.CONFIG.GENERAL.enableNethering;
+	static boolean mining = MiningDims.CONFIG.GENERAL.enableMiningPortal;
+	static boolean hunting = MiningDims.CONFIG.GENERAL.enableHuntingPortal;
+	static boolean caving = MiningDims.CONFIG.GENERAL.enableCavingPortal;
+	static boolean nethering = MiningDims.CONFIG.GENERAL.enableNetheringPortal;
 
     public static void registerPortal()
     {

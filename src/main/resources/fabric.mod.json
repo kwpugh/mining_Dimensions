@@ -15,7 +15,7 @@
   },
 
   "license": "MIT",
-  "icon": "",
+  "icon": "assets/mining_dims/textures/item/mining_teleporter.png",
 
   "environment": "*",
   "entrypoints": {

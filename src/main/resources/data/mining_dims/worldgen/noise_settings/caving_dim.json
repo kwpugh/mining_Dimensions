@@ -5,7 +5,7 @@
   "noodle_caves_enabled": true,
   "min_surface_level": 0,
   "disable_mob_generation": true,
-  "aquifers_enabled": true,
+  "aquifers_enabled": false,
   "default_fluid": {
     "Properties": {
       "level": "0"
