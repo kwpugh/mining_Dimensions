@@ -37,7 +37,6 @@ public class CavingTeleporter extends Item
     {
         ItemStack stack = player.getStackInHand(hand);
 
-        //if(world.isClient && !(world instanceof ServerWorld)) return TypedActionResult.success(stack);
         if (world.isClient)
             return TypedActionResult.success(stack);
 
