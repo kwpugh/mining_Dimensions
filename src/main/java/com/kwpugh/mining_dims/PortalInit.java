@@ -1,7 +1,5 @@
 package com.kwpugh.mining_dims;
 
-import com.kwpugh.mining_dims.MiningDims;
-
 import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;

@@ -48,8 +48,8 @@ dependencies {
 	}
 
 	//Custom Portals
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta39-1.17'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta39-1.17'
+	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
 }
 
 processResources {
