@@ -2,6 +2,8 @@ package com.kwpugh.mining_dims;
 
 import com.kwpugh.mining_dims.config.MiningDimsConfig;
 import com.kwpugh.mining_dims.init.ItemInit;
+import com.kwpugh.mining_dims.init.MiningDimsRegistry;
+import com.kwpugh.mining_dims.init.PortalInit;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import me.shedaniel.autoconfig.AutoConfig;

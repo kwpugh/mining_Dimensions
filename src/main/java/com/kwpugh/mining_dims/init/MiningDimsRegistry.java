@@ -1,5 +1,6 @@
-package com.kwpugh.mining_dims;
+package com.kwpugh.mining_dims.init;
 
+import com.kwpugh.mining_dims.MiningDims;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.World;

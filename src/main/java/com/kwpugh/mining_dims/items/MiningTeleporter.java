@@ -1,6 +1,6 @@
 package com.kwpugh.mining_dims.items;
 
-import com.kwpugh.mining_dims.MiningDimsRegistry;
+import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;

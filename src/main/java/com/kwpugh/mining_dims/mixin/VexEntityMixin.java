@@ -1,6 +1,6 @@
 package com.kwpugh.mining_dims.mixin;
 
-import com.kwpugh.mining_dims.MiningDimsRegistry;
+import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

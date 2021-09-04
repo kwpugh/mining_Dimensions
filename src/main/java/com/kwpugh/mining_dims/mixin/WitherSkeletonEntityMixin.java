@@ -1,6 +1,6 @@
 package com.kwpugh.mining_dims.mixin;
 
-import com.kwpugh.mining_dims.MiningDimsRegistry;
+import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
