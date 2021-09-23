@@ -1,5 +1,5 @@
 {
-  "noise_caves_enabled": false,
+  "noise_caves_enabled": true,
   "deepslate_enabled": true,
   "ore_veins_enabled": true,
   "noodle_caves_enabled": false,
@@ -53,11 +53,6 @@
         "spacing": 24,
         "separation": 4,
         "salt": 165745295
-      },
-      "minecraft:mineshaft": {
-        "spacing": 1,
-        "separation": 0,
-        "salt": 0
       },
       "minecraft:desert_pyramid": {
         "spacing": 32,
@@ -134,7 +129,7 @@
     "size_horizontal": 1,
     "size_vertical": 2,
     "min_y": 0,
-    "height": 128,
+    "height": 384,
     "sampling": {
       "xz_scale": 1.0,
       "y_scale": 3.0,

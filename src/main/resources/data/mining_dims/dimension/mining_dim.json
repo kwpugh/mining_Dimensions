@@ -26,8 +26,8 @@
               -0.3
             ],
             "continentalness": [
-              -0.11,
-              0.03
+              0.0,
+              0.0
             ]
           },
           "biome": "minecraft:desert"
@@ -35,8 +35,8 @@
         {
           "parameters": {
             "erosion": [
-              0.45,
-              0.55
+              -0.78,
+              -0.375
             ],
             "depth": 0.0,
             "weirdness": [
@@ -49,16 +49,17 @@
               -0.15
             ],
             "humidity": [
-              -0.1,
-              0.1
+              -1.0,
+              -0.3
             ],
             "continentalness": [
-              0.03,
-              1.0
+              0.0,
+              0.0
             ]
           },
-          "biome": "minecraft:mountains"
+          "biome": "minecraft:plains"
         }
+
 
 
       ],

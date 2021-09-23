@@ -10,7 +10,7 @@
   "natural": true,
   "coordinate_scale": 1.0,
   "piglin_safe": false,
-  "bed_works": true,
+  "bed_works": false,
   "has_skylight": true,
   "has_ceiling": false,
   "ultrawarm": false,

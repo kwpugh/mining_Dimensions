@@ -81,9 +81,7 @@ public class HuntingTeleporter extends Item
             Biome biome = destWorld.getBiome(new BlockPos(x, y, z));
 
             //Lets not dump the player in the middle of a body of water, shall we?
-            if ((biome.getCategory().getName().equals("ocean")) ||
-                    (biome.getCategory().getName().equals("river")) ||
-                    (biome.getCategory().getName().equals("beach")))
+            if ((biome.getCategory().getName().equals("ocean")))
             {
                 continue;
             }

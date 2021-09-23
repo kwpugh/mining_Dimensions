@@ -9,7 +9,7 @@
   "height": 384,
   "natural": true,
   "coordinate_scale": 1.0,
-  "piglin_safe": false,
+  "piglin_safe": true,
   "bed_works": false,
   "has_skylight": false ,
   "has_ceiling": false,
