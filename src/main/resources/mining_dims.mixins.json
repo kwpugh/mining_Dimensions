@@ -9,7 +9,8 @@
     "PiglinBruteEntityMixin",
     "VexEntityMixin",
     "AbstractSkeletonEntityMixin",
-    "WitherSkeletonEntityMixin"
+    "WitherSkeletonEntityMixin",
+    "GoatEntityMixin"
   ],
   "client": [
   ],

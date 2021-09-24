@@ -3,6 +3,7 @@
 	"item.mining_dims.hunting_teleporter": "Hunting Teleporter",
 	"item.mining_dims.caving_teleporter": "Caving Teleporter",
 	"item.mining_dims.nethering_teleporter": "Nethering Teleporter",
+	"item.mining_dims.climbing_teleporter": "Climbing Teleporter",
 
 	"item.mining_dims.teleporter1": "Please stand still, checking for a safe spot",
 	"item.mining_dims.teleporter2": "Still checking...",

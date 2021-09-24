@@ -21,6 +21,7 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enableHuntingPortal = true;
         public boolean enableCavingPortal = true;
         public boolean enableNetheringPortal = true;
+        public boolean enableClimbingPortal = true;
 
         @Comment("\n"
                 + "\n"
@@ -31,5 +32,6 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enableHuntingTeleporter = true;
         public boolean enableCavingTeleporter = true;
         public boolean enableNetheringTeleporter = true;
+        public boolean enableClimbingTeleporter = true;
     }
 }

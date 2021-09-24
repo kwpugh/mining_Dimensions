@@ -17,6 +17,7 @@ public class MiningDims implements ModInitializer
     public static final Identifier MOD_DIMENSION2_ID = new Identifier(MiningDims.MOD_ID, "hunting_dim");
     public static final Identifier MOD_DIMENSION3_ID = new Identifier(MiningDims.MOD_ID, "caving_dim");
     public static final Identifier MOD_DIMENSION4_ID = new Identifier(MiningDims.MOD_ID, "nethering_dim");
+    public static final Identifier MOD_DIMENSION5_ID = new Identifier(MiningDims.MOD_ID, "climbing_dim");
 
     public static final MiningDimsConfig CONFIG = AutoConfig.register(MiningDimsConfig.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new)).getConfig();
 

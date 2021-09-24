@@ -12,6 +12,7 @@ public class MiningDimsRegistry
     public static final RegistryKey<World> MININGDIMS_WORLD_KEY2 = RegistryKey.of(Registry.WORLD_KEY, MiningDims.MOD_DIMENSION2_ID);
     public static final RegistryKey<World> MININGDIMS_WORLD_KEY3 = RegistryKey.of(Registry.WORLD_KEY, MiningDims.MOD_DIMENSION3_ID);
     public static final RegistryKey<World> MININGDIMS_WORLD_KEY4 = RegistryKey.of(Registry.WORLD_KEY, MiningDims.MOD_DIMENSION4_ID);
+    public static final RegistryKey<World> MININGDIMS_WORLD_KEY5 = RegistryKey.of(Registry.WORLD_KEY, MiningDims.MOD_DIMENSION5_ID);
 
     public static void setupDimension()
     {

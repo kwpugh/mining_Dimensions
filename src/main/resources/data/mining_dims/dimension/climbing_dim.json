@@ -8,40 +8,40 @@
         {
           "parameters": {
             "erosion": [
-              0.0,
-              0.0
+              0.45,
+              0.55
             ],
             "depth": 0.0,
             "weirdness": [
-              0.0,
-              0.0
+              -1.0,
+              -0.93333334
             ],
             "offset": 0.0,
             "temperature": [
-              0.55,
-              1.0
+              -0.45,
+              -0.15
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -0.1,
+              0.1
             ],
             "continentalness": [
-              1.0,
+              0.03,
               1.0
             ]
           },
-          "biome": "minecraft:plains"
+          "biome": "minecraft:mountains"
         },
         {
           "parameters": {
             "erosion": [
-               0.0,
-               0.0
+              -0.2225,
+              0.05
             ],
-            "depth": 0.0,
+            "depth": 1.0,
             "weirdness": [
-               0.0,
-               0.0
+              -0.5666,
+              -0.4
             ],
             "offset": 0.0,
             "temperature": [
@@ -57,9 +57,8 @@
               1.0
             ]
           },
-          "biome": "minecraft:desert"
+          "biome": "minecraft:badlands"
         }
-
 
 
 
