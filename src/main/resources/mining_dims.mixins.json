@@ -10,7 +10,8 @@
     "VexEntityMixin",
     "AbstractSkeletonEntityMixin",
     "WitherSkeletonEntityMixin",
-    "GoatEntityMixin"
+    "GoatEntityMixin",
+    "DefaultBiomeFeaturesMixin"
   ],
   "client": [
   ],

@@ -33,5 +33,15 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enableCavingTeleporter = true;
         public boolean enableNetheringTeleporter = true;
         public boolean enableClimbingTeleporter = true;
+
+        @Comment("\n"
+                + "\n"
+                + "***********************"
+                + "\nExtra Overworld Deepslate Ores"
+                + "\n (Also affects the Mining, Climbing, & Caving Dims)"
+                + "\n***********************")
+        public int extraDiamondDeepslateVeinSize = 3;
+        public int extraDiamondDeepslateVeinsPerChunk = 8;
+        public int extraDiamondDeepslateMaxHeight = -50;
     }
 }

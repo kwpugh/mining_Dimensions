@@ -3,8 +3,6 @@
   "generator": {
     "biome_source": {
       "biomes": [
-
-
         {
           "parameters": {
             "erosion": [
@@ -32,9 +30,6 @@
           },
           "biome": "minecraft:mushroom_fields"
         }
-
-
-
       ],
       "type": "minecraft:multi_noise"
     },

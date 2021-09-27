@@ -3,8 +3,6 @@
   "generator": {
     "biome_source": {
       "biomes": [
-
-
       {
         "parameters": {
           "erosion": [
@@ -32,9 +30,6 @@
         },
         "biome":  "mining_dims:hunting_dim_plains"
       }
-
-
-
       ],
       "type": "minecraft:multi_noise"
     },

@@ -11,7 +11,7 @@ public class ItemInit
 {
     static boolean mining = MiningDims.CONFIG.GENERAL.enableMiningTeleporter;
     static boolean caving = MiningDims.CONFIG.GENERAL.enableCavingTeleporter;
-    static boolean climbing = MiningDims.CONFIG.GENERAL.enableClimbingPortal;
+    static boolean climbing = MiningDims.CONFIG.GENERAL.enableClimbingTeleporter;
     static boolean nethering = MiningDims.CONFIG.GENERAL.enableNetheringTeleporter;
     static boolean hunting = MiningDims.CONFIG.GENERAL.enableHuntingTeleporter;
 
