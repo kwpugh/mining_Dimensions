@@ -94,8 +94,9 @@ public class HuntingTeleporter extends Item
 
                 if (!chunk.getBlockState(groundPos).getMaterial().equals(Material.AIR) &&
                         (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.BEDROCK) &&
-                                (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.WATER) &&
-                                        (y - 2) > 60)))
+                        (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.LAVA) &&
+                        (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.WATER) &&
+                        (y - 2) > 60))))
                 {
                     BlockPos legPos = new BlockPos(x, y - 1, z);
 
