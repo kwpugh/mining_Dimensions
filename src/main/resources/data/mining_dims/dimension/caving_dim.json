@@ -39,7 +39,7 @@
       "type": "minecraft:multi_noise"
     },
     "seed": 0,
-    "settings": "mining_dims:caving_dim",
+    "settings": "mining_dims:caving_dim_noise",
     "type": "minecraft:noise"
   }
 }

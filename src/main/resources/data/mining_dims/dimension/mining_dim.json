@@ -3,18 +3,16 @@
   "generator": {
     "biome_source": {
       "biomes": [
-
-
         {
           "parameters": {
             "erosion": [
-              0.0,
-              0.0
+              -0.375,
+              -0.2225
             ],
             "depth": 0.0,
             "weirdness": [
-              0.0,
-              0.0
+              -1.0,
+              -0.93333334
             ],
             "offset": 0.0,
             "temperature": [
@@ -26,49 +24,44 @@
               -0.3
             ],
             "continentalness": [
-              1.0,
-              1.0
+              -0.11,
+              0.03
             ]
           },
-          "biome": "minecraft:plains"
+          "biome": "minecraft:desert"
         },
         {
           "parameters": {
             "erosion": [
-               0.0,
-               0.0
+              -0.78,
+              -0.375
             ],
             "depth": 0.0,
             "weirdness": [
-               0.0,
-               0.0
+              -1.0,
+              -0.93333334
             ],
             "offset": 0.0,
             "temperature": [
-              0.55,
-              1.0
+              -0.45,
+              -0.15
             ],
             "humidity": [
               -1.0,
               -0.3
             ],
             "continentalness": [
-              1.0,
-              1.0
+              -0.11,
+              0.3
             ]
           },
-          "biome": "minecraft:desert"
+          "biome": "minecraft:plains"
         }
-
-
-
-
-
       ],
       "type": "minecraft:multi_noise"
     },
     "seed": 0,
-    "settings": "minecraft:overworld",
+    "settings": "mining_dims:mining_dim_noise",
     "type": "minecraft:noise"
   }
 }

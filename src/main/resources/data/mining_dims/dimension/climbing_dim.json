@@ -1,10 +1,8 @@
 {
-  "type": "mining_dims:mining_dim",
+  "type": "mining_dims:climbing_dim",
   "generator": {
     "biome_source": {
       "biomes": [
-
-
         {
           "parameters": {
             "erosion": [
@@ -53,21 +51,17 @@
               -0.3
             ],
             "continentalness": [
-              1.0,
+              0.3,
               1.0
             ]
           },
           "biome": "minecraft:badlands"
         }
-
-
-
-
       ],
       "type": "minecraft:multi_noise"
     },
     "seed": 0,
-    "settings": "minecraft:overworld",
+    "settings": "mining_dims:climbing_dim_noise",
     "type": "minecraft:noise"
   }
 }
