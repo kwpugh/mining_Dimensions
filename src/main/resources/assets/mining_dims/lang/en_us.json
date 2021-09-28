@@ -8,5 +8,8 @@
 	"item.mining_dims.teleporter1": "Please stand still, checking for a safe spot",
 	"item.mining_dims.teleporter2": "Still checking...",
 	"item.mining_dims.teleporter3": "Unable to find a safe spot, please try again in another spot",
-	"item.mining_dims.teleporter.desc": "A portable teleport device"
+	"item.mining_dims.teleporter4": "Welcome Home!",
+	"item.mining_dims.teleporter5": "Set a bed spawn first",
+	"item.mining_dims.teleporter.desc": "A portable teleport device",
+	"item.mining_dims.teleporter.desc2": "Sneak + right-click returns to bed"
 }

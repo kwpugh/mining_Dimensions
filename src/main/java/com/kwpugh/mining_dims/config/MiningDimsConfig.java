@@ -33,6 +33,7 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enableCavingTeleporter = true;
         public boolean enableNetheringTeleporter = true;
         public boolean enableClimbingTeleporter = true;
+        public boolean enableReturnToBed = true;
 
         @Comment("\n"
                 + "\n"
