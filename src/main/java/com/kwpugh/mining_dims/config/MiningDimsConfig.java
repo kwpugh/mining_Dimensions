@@ -38,6 +38,17 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         @Comment("\n"
                 + "\n"
                 + "***********************"
+                + "\nTeleporters"
+                + "\n * disable check and place player"
+                + "\n possibly in middle of an ocean on"
+                + "\n a stone block."
+                + "\n * be sure to be carrying a boat!"
+                + "\n***********************")
+        public boolean enableOceanCheck = true;
+
+        @Comment("\n"
+                + "\n"
+                + "***********************"
                 + "\nExtra Overworld Deepslate Ores"
                 + "\n (Also affects the Mining, Climbing, & Caving Dims)"
                 + "\n***********************")
