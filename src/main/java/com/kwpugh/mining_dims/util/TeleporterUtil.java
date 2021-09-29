@@ -1,6 +1,7 @@
 package com.kwpugh.mining_dims.util;
 
 import com.kwpugh.mining_dims.MiningDims;
+import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.entity.player.PlayerEntity;
@@ -91,7 +92,7 @@ public class TeleporterUtil
 
                 // Use players current x and z for starting point
                 int x = (int) Math.round(playerLoc.getX()) + rand.nextInt(10 + 5) - 5;
-                int y = 150;
+                int y = (dimKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY3) ? 325 : 150;
                 int z = (int) Math.round(playerLoc.getZ()) + rand.nextInt(10 + 5) - 5;
 
                 Chunk chunk = destWorld.getChunk(x >> 4, z >> 4);
@@ -111,6 +112,13 @@ public class TeleporterUtil
                 {
                     y--;
                     BlockPos groundPos = new BlockPos(x, y - 2, z);
+
+
+
+                    System.out.println("x: " + x + "  y: " + (y-2) + " z: " + z + " material: " + chunk.getBlockState(groundPos).getMaterial());
+
+
+
 
                     if (!chunk.getBlockState(groundPos).getMaterial().equals(Material.AIR) &&
                             (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.BEDROCK) &&
