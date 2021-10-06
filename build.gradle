@@ -47,9 +47,9 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
-//	//Custom Portals
-//	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
-//	include 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
+	//Custom Portals
+	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta45-1.18'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta45-1.18'
 }
 
 processResources {
