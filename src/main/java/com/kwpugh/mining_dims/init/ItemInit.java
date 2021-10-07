@@ -3,7 +3,6 @@ package com.kwpugh.mining_dims.init;
 import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.items.*;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -15,11 +14,11 @@ public class ItemInit
     static boolean nethering = MiningDims.CONFIG.GENERAL.enableNetheringTeleporter;
     static boolean hunting = MiningDims.CONFIG.GENERAL.enableHuntingTeleporter;
 
-    public static final Item MINING_TELEPORTER = new MiningTeleporter(new Item.Settings().group(ItemGroup.MISC));
-    public static final Item CAVING_TELEPORTER = new CavingTeleporter(new Item.Settings().group(ItemGroup.MISC));
-    public static final Item CLIMBING_TELEPORTER = new ClimbingTeleporter(new Item.Settings().group(ItemGroup.MISC));
-    public static final Item NETHERING_TELEPORTER = new NetheringTeleporter(new Item.Settings().group(ItemGroup.MISC));
-    public static final Item HUNTING_TELEPORTER = new HuntingTeleporter(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item MINING_TELEPORTER = new MiningTeleporter(new Item.Settings().group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item CAVING_TELEPORTER = new CavingTeleporter(new Item.Settings().group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item CLIMBING_TELEPORTER = new ClimbingTeleporter(new Item.Settings().group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item NETHERING_TELEPORTER = new NetheringTeleporter(new Item.Settings().group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item HUNTING_TELEPORTER = new HuntingTeleporter(new Item.Settings().group(MiningDims.MINING_DIMS_GROUP));
 
 
     public static void init()

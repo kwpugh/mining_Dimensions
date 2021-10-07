@@ -1,4 +1,6 @@
 {
+	"itemGroup.mining_dims.mining_dims_group": "Mining Dimensions",
+
 	"item.mining_dims.mining_teleporter": "Mining Teleporter",
 	"item.mining_dims.hunting_teleporter": "Hunting Teleporter",
 	"item.mining_dims.caving_teleporter": "Caving Teleporter",
