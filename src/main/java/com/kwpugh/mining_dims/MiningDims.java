@@ -1,6 +1,7 @@
 package com.kwpugh.mining_dims;
 
 import com.kwpugh.mining_dims.config.MiningDimsConfig;
+import com.kwpugh.mining_dims.init.EnchantmentInit;
 import com.kwpugh.mining_dims.init.ItemInit;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.init.PortalInit;
@@ -33,6 +34,7 @@ public class MiningDims implements ModInitializer
         PortalInit.registerPortal();
         MiningDimsRegistry.setupDimension();
         ItemInit.init();
+        EnchantmentInit.registerEnchantments();
         OreGen.Features();
     }	
 }

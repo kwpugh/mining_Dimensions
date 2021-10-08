@@ -13,5 +13,8 @@
 	"item.mining_dims.teleporter4": "Welcome Home!",
 	"item.mining_dims.teleporter5": "Set a bed spawn first",
 	"item.mining_dims.teleporter.desc": "A portable teleport device",
-	"item.mining_dims.teleporter.desc2": "Sneak + right-click returns to bed"
+	"item.mining_dims.teleporter.desc2": "Sneak + right-click returns to bed",
+
+	"enchantment.mining_dims.returning": "Returning (to bed)",
+	"enchantment.mining_dims.returning.desc": "Mining Dimensions: (Teleporter) Sneak + right-click to return to bed"
 }

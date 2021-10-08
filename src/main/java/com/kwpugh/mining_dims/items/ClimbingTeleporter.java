@@ -39,10 +39,5 @@ public class ClimbingTeleporter extends Item
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
     {
         tooltip.add(new TranslatableText("item.mining_dims.teleporter.desc").formatted(Formatting.GREEN));
-
-        if(MiningDims.CONFIG.GENERAL.enableReturnToBed)
-        {
-            tooltip.add(new TranslatableText("item.mining_dims.teleporter.desc2").formatted(Formatting.GREEN));
-        }
     }
 }

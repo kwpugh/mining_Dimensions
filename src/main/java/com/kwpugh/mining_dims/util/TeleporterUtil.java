@@ -31,28 +31,34 @@ public class TeleporterUtil
 
         if (world.isClient) return TypedActionResult.success(stack);
 
-        if (MiningDims.CONFIG.GENERAL.enableReturnToBed && player.isSneaking())  // RETURN PLAYER TO BED
+        // If teleporter is enchanted, check for Returning and return to bed if so
+        if(stack.hasEnchantments())
         {
-            ServerWorld serverWorld = ((ServerWorld)world).getServer().getWorld(World.OVERWORLD);
-            ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
+            boolean hasReturning = stack.getEnchantments().toString().contains("returning");
 
-            if(serverPlayer.getSpawnPointPosition() != null) //player bed location not null
+            if (hasReturning && player.isSneaking())  // RETURN PLAYER TO BED
             {
-                BlockPos bedLoc = serverPlayer.getSpawnPointPosition(); //get player bed position
-                serverPlayer.stopRiding();
+                ServerWorld serverWorld = ((ServerWorld)world).getServer().getWorld(World.OVERWORLD);
+                ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
 
-                serverPlayer.teleport(serverWorld, bedLoc.getX() + 0.5F, bedLoc.getY(), bedLoc.getZ() + 0.5F, serverPlayer.getYaw(), serverPlayer.getPitch());
-                world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+                if(serverPlayer.getSpawnPointPosition() != null) //player bed location not null
+                {
+                    BlockPos bedLoc = serverPlayer.getSpawnPointPosition(); //get player bed position
+                    serverPlayer.stopRiding();
 
-                player.sendMessage((new TranslatableText("item.mining_dims.teleporter4")), true);   //Welcome Home!
+                    serverPlayer.teleport(serverWorld, bedLoc.getX() + 0.5F, bedLoc.getY(), bedLoc.getZ() + 0.5F, serverPlayer.getYaw(), serverPlayer.getPitch());
+                    world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
-                TypedActionResult.success(stack1);
-            }
-            else
-            {
-                player.sendMessage((new TranslatableText("item.mining_dims.teleporter5")), true);  //Set a bed spawn first!
+                    player.sendMessage((new TranslatableText("item.mining_dims.teleporter4")), true);   //Welcome Home!
 
-                TypedActionResult.success(stack);
+                    TypedActionResult.success(stack1);
+                }
+                else
+                {
+                    player.sendMessage((new TranslatableText("item.mining_dims.teleporter5")), true);  //Set a bed spawn first!
+
+                    TypedActionResult.success(stack);
+                }
             }
         }
 
