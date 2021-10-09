@@ -35,7 +35,6 @@ public class TeleporterUtil
         if(stack.hasEnchantments())
         {
             boolean hasReturning = stack.getEnchantments().toString().contains("returning");
-
             if (hasReturning && player.isSneaking())  // RETURN PLAYER TO BED
             {
                 ServerWorld serverWorld = ((ServerWorld)world).getServer().getWorld(World.OVERWORLD);

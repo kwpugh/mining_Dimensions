@@ -11,7 +11,9 @@
     "AbstractSkeletonEntityMixin",
     "WitherSkeletonEntityMixin",
     "GoatEntityMixin",
-    "DefaultBiomeFeaturesMixin"
+    "DefaultBiomeFeaturesMixin",
+    "AnvilScreenHandlerMixin",
+    "ForgingScreenHandlerAccessor"
   ],
   "client": [
   ],

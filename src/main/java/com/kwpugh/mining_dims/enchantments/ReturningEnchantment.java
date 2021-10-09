@@ -14,14 +14,16 @@ public class ReturningEnchantment extends Enchantment
         super(weight, target, slotTypes);
     }
 
+    @Override
     public int getMinPower(int level)
     {
-        return 20;
+        return 1 + 10 * (level - 1);
     }
 
+    @Override
     public int getMaxPower(int level)
     {
-        return 50;
+        return super.getMinPower(level) + 50;
     }
 
     @Override
@@ -30,23 +32,8 @@ public class ReturningEnchantment extends Enchantment
         return 1;
     }
 
-    /*
-     * Makes the enchant only available
-     *  from Village librarian
-     */
     @Override
-    public boolean isAvailableForEnchantedBookOffer()
-    {
-        return true;
-    }
-
-    /*
-     * This excludes enchant from enchanting table
-     * and loot
-     */
-    @Override
-    public boolean isAvailableForRandomSelection()
-    {
+    public boolean isTreasure() {
         return true;
     }
 
