@@ -1,5 +1,6 @@
 package com.kwpugh.mining_dims.mixin;
 
+import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
@@ -31,18 +32,19 @@ public abstract class ZombieEntityMixin extends MobEntity
 		super(entityType, world);
 	}
 
-    @Inject(method="applyAttributeModifiers",at=@At("TAIL"),cancellable = true)
-    public void miningDimsApplyAttributeModifiers(float chanceMultiplier, CallbackInfo ci)
-    {
+	@Inject(method="initEquipment",at=@At("TAIL"),cancellable = true)
+	private void gobberInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
+	{
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
-        {
-	        this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).addPersistentModifier(new EntityAttributeModifier("MiningDims Health Bonus", 40.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).addPersistentModifier(new EntityAttributeModifier("MiningDims Attack Bonus", 6.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_ARMOR).addPersistentModifier(new EntityAttributeModifier("MiningDims Armor Bonus", 8.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).addPersistentModifier(new EntityAttributeModifier("MiningDims Movement Bonus", 0.05D, EntityAttributeModifier.Operation.ADDITION));
+		{
+			this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_SWORD));
+			this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.DIAMOND_HELMET));
+			this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.DIAMOND_CHESTPLATE));
+			this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
+			this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
 		}
-    }
+	}
 
 	@Inject(method="damage",at=@At("HEAD"),cancellable = true)
 	public void gobberDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
@@ -63,17 +65,21 @@ public abstract class ZombieEntityMixin extends MobEntity
 		}
 	}
 
-    @Inject(method="initEquipment",at=@At("TAIL"),cancellable = true)
-    private void gobberInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
-    {
+	@Inject(method="applyAttributeModifiers",at=@At("TAIL"),cancellable = true)
+	public void miningDimsApplyAttributeModifiers(float chanceMultiplier, CallbackInfo ci)
+	{
+		double health = MiningDims.CONFIG.GENERAL.zombieMaxHealth;
+		double attack = MiningDims.CONFIG.GENERAL.zombieAttackDamageBonus;
+		double armor = MiningDims.CONFIG.GENERAL.zombieArmorBonus;
+		double speed = MiningDims.CONFIG.GENERAL.zombieMovementBonus;
+
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
-        {
-		 	this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.DIAMOND_SWORD));
-	    	this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.DIAMOND_HELMET));
-	    	this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.DIAMOND_CHESTPLATE));
-	    	this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.DIAMOND_LEGGINGS));
-	    	this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.DIAMOND_BOOTS));
+		{
+			this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).addPersistentModifier(new EntityAttributeModifier("MiningDims Health Bonus", health, EntityAttributeModifier.Operation.ADDITION));
+			this.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).addPersistentModifier(new EntityAttributeModifier("MiningDims Attack Bonus", attack, EntityAttributeModifier.Operation.ADDITION));
+			this.getAttributeInstance(EntityAttributes.GENERIC_ARMOR).addPersistentModifier(new EntityAttributeModifier("MiningDims Armor Bonus", armor, EntityAttributeModifier.Operation.ADDITION));
+			this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).addPersistentModifier(new EntityAttributeModifier("MiningDims Movement Bonus", speed, EntityAttributeModifier.Operation.ADDITION));
 		}
-    }
+	}
 }

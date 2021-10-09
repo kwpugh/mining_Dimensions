@@ -55,5 +55,28 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public int extraDiamondDeepslateVeinSize = 3;
         public int extraDiamondDeepslateVeinsPerChunk = 8;
         public int extraDiamondDeepslateMaxHeight = -50;
+
+        @Comment("\n"
+                + "\n"
+                + "***********************"
+                + "\nHunting Dim Mobs"
+                + "\n - settings for mob attributes"
+                + "\n***********************")
+        public double zombieMaxHealth = 40.0D;
+        public double zombieAttackDamageBonus = 6.0D;
+        public double zombieArmorBonus = 8.0D;
+        public double zombieMovementBonus = 0.050D;
+        public double piglinMaxHealth = 40.0D;
+        public double piglinAttackDamageBonus = 20.0D;
+        public double piglinArmorBonus = 20.0D;
+        public double piglinMovementBonus = 0.050D;
+        public double piglinBruteMaxHealth = 60.0D;
+        public double piglinBruteAttackDamageBonus = 20.0D;
+        public double piglinBruteArmorBonus = 20.0D;
+        public double piglinBruteMovementBonus = 0.0750D;
+        public double witherSkeletonMaxHealth = 80.0D;
+        public double witherSkeletonDamageBonus = 20.0D;
+        public double witherSkeletonArmorBonus = 20.0D;
+        public double witherSkeletonMovementBonus = 0.0850D;
     }
 }

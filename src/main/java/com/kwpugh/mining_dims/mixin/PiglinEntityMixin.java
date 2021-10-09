@@ -1,5 +1,6 @@
 package com.kwpugh.mining_dims.mixin;
 
+import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -56,13 +57,18 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 
     private void gobberApplyAttributeModifiers()
     {
+		double health = MiningDims.CONFIG.GENERAL.piglinMaxHealth;
+		double attack = MiningDims.CONFIG.GENERAL.piglinAttackDamageBonus;
+		double armor = MiningDims.CONFIG.GENERAL.piglinArmorBonus;
+		double speed = MiningDims.CONFIG.GENERAL.piglinMovementBonus;
+
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
         {
-	        this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).addPersistentModifier(new EntityAttributeModifier("MiningDims Health Bonus", 40.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).addPersistentModifier(new EntityAttributeModifier("MiningDims Attack Bonus", 20.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_ARMOR).addPersistentModifier(new EntityAttributeModifier("MiningDims Armor Bonus", 20.0D, EntityAttributeModifier.Operation.ADDITION));
-	        this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).addPersistentModifier(new EntityAttributeModifier("MiningDims Movement Bonus", 0.05D, EntityAttributeModifier.Operation.ADDITION));
+	        this.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).addPersistentModifier(new EntityAttributeModifier("MiningDims Health Bonus", health, EntityAttributeModifier.Operation.ADDITION));
+	        this.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).addPersistentModifier(new EntityAttributeModifier("MiningDims Attack Bonus", attack, EntityAttributeModifier.Operation.ADDITION));
+	        this.getAttributeInstance(EntityAttributes.GENERIC_ARMOR).addPersistentModifier(new EntityAttributeModifier("MiningDims Armor Bonus", armor, EntityAttributeModifier.Operation.ADDITION));
+	        this.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).addPersistentModifier(new EntityAttributeModifier("MiningDims Movement Bonus", speed, EntityAttributeModifier.Operation.ADDITION));
 		}
     }
 }
