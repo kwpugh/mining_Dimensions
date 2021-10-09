@@ -25,7 +25,7 @@ public class PortalInit
 		if(mining)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.COBBLESTONE)
+					.frameBlock(Blocks.DEEPSLATE)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "mining_dim"))
 					.tintColor(50, 133, 168)
 					.registerPortal();
@@ -43,7 +43,7 @@ public class PortalInit
 		if(caving)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.DIORITE)
+					.frameBlock(Blocks.TUFF)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "caving_dim"))
 					.tintColor(28, 27, 31)
 					.registerPortal();

@@ -17,7 +17,7 @@ public class TeleporterAnvilAction
         if(accessor.getInput().getStack(1).getItem().equals(Items.WHITE_BED))
         {
             ItemStack result = accessor.getInput().getStack(0).copy();
-            result.addEnchantment(EnchantmentInit.RETURNING, 0);
+            result.addEnchantment(EnchantmentInit.RETURNING, 1);
 
             if (!StringUtils.isBlank(newItemName))
             {
