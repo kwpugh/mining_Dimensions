@@ -78,5 +78,17 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public double witherSkeletonDamageBonus = 20.0D;
         public double witherSkeletonArmorBonus = 20.0D;
         public double witherSkeletonMovementBonus = 0.0850D;
+
+        @Comment("\n"
+                + "\n"
+                + "***********************"
+                + "\nHunting Dim Mobs"
+                + "\n - settings for armor/weapon"
+                + "\n***********************")
+        public boolean enableZombieGear = true;
+        public boolean enablePiglinGear = true;
+        public boolean enablePiglinBruteGear = true;
+        public boolean enableWitherSkeletonGear = true;
+        public boolean enableVexGear = true;
     }
 }

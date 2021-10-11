@@ -1,5 +1,6 @@
 package com.kwpugh.mining_dims.mixin;
 
+import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,7 +31,10 @@ public abstract class VexEntityMixin extends HostileEntity
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
         {
-			this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_SWORD));
+        	if(MiningDims.CONFIG.GENERAL.enableVexGear)
+			{
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_SWORD));
+			}
 		}
 	}
 }

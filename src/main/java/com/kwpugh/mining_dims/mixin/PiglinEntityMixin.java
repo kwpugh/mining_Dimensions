@@ -40,11 +40,14 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
         {
-		 	this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.GOLDEN_SWORD));
-	    	this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.GOLDEN_HELMET));
-	    	this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.GOLDEN_CHESTPLATE));
-	    	this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.GOLDEN_LEGGINGS));
-	    	this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.GOLDEN_BOOTS));
+        	if(MiningDims.CONFIG.GENERAL.enablePiglinGear)
+			{
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.GOLDEN_SWORD));
+				this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.GOLDEN_HELMET));
+				this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.GOLDEN_CHESTPLATE));
+				this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.GOLDEN_LEGGINGS));
+				this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.GOLDEN_BOOTS));
+			}
 		}
     }
 

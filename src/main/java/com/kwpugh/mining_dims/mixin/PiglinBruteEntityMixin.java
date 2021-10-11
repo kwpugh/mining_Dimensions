@@ -38,11 +38,14 @@ public abstract class PiglinBruteEntityMixin extends AbstractPiglinEntity implem
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
         {
-		 	this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_SWORD));
-	    	this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.NETHERITE_HELMET));
-	    	this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.NETHERITE_CHESTPLATE));
-	    	this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.NETHERITE_LEGGINGS));
-	    	this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.NETHERITE_BOOTS));
+			if(MiningDims.CONFIG.GENERAL.enablePiglinBruteGear)
+			{
+				this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.NETHERITE_SWORD));
+				this.equipStack(EquipmentSlot.HEAD, new ItemStack(Items.NETHERITE_HELMET));
+				this.equipStack(EquipmentSlot.CHEST, new ItemStack(Items.NETHERITE_CHESTPLATE));
+				this.equipStack(EquipmentSlot.LEGS, new ItemStack(Items.NETHERITE_LEGGINGS));
+				this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.NETHERITE_BOOTS));
+			}
 		}
     }
 
