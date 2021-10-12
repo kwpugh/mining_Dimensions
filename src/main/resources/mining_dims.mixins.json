@@ -13,7 +13,8 @@
     "GoatEntityMixin",
     "DefaultBiomeFeaturesMixin",
     "AnvilScreenHandlerMixin",
-    "ForgingScreenHandlerAccessor"
+    "ForgingScreenHandlerAccessor",
+    "LivingEntityMixinDrops"
   ],
   "client": [
   ],

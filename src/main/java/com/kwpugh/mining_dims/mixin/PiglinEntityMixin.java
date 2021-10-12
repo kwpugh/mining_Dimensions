@@ -52,13 +52,13 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     }
 
     @Inject(method="initialize",at=@At("TAIL"),cancellable = true)
-    public void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
+    public void miningdimsApplyAttributeModifiersInitialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
     {
-    	this.gobberApplyAttributeModifiers();
+    	this.miningdimsApplyAttributeModifiersApplyAttributeModifiers();
     	this.updateEnchantments(difficulty);
     }
 
-    private void gobberApplyAttributeModifiers()
+    private void miningdimsApplyAttributeModifiersApplyAttributeModifiers()
     {
 		double health = MiningDims.CONFIG.GENERAL.piglinMaxHealth;
 		double attack = MiningDims.CONFIG.GENERAL.piglinAttackDamageBonus;

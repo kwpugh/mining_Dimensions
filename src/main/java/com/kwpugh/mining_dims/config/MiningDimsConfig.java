@@ -90,5 +90,6 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enablePiglinBruteGear = true;
         public boolean enableWitherSkeletonGear = true;
         public boolean enableVexGear = true;
+        public double gearDropChannce = 0.10;
     }
 }

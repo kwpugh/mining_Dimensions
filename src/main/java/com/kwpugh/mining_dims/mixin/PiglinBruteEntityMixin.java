@@ -50,7 +50,7 @@ public abstract class PiglinBruteEntityMixin extends AbstractPiglinEntity implem
     }
 
 	@Inject(method="damage",at=@At("HEAD"),cancellable = true)
-	public void gobberDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
+	public void miningdimsDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
 	{
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(!this.world.isClient() && registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
@@ -63,13 +63,13 @@ public abstract class PiglinBruteEntityMixin extends AbstractPiglinEntity implem
 	}
 
     @Inject(method="initialize",at=@At("TAIL"),cancellable = true)
-    public void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
+    public void miningdimsInitialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
     {
-    	this.gobberApplyAttributeModifiers();
+    	this.miningdimsApplyAttributeModifiers();
     	this.updateEnchantments(difficulty);
     }
 
-    private void gobberApplyAttributeModifiers()
+    private void miningdimsApplyAttributeModifiers()
     {
     	double health = MiningDims.CONFIG.GENERAL.piglinBruteMaxHealth;
 		double attack = MiningDims.CONFIG.GENERAL.piglinBruteAttackDamageBonus;

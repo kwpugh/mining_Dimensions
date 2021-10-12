@@ -51,7 +51,7 @@ public abstract class WitherSkeletonEntityMixin extends AbstractSkeletonEntity
     }
 
     @Inject(method="initialize",at=@At("TAIL"),cancellable = true)
-    public void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
+    public void miningdimsApplyAttributeModifiersInitialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
     {
         this.miningDimsApplyAttributeModifiers();
         this.updateEnchantments(difficulty);

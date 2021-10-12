@@ -15,6 +15,9 @@
 	"item.mining_dims.teleporter.desc": "A portable teleport device",
 	"item.mining_dims.teleporter.desc2": "Sneak + right-click returns to bed",
 
+	"item.mining_dims.diamond_nugget": "Diamond Nugget",
+	"item.mining_dims.netherite_fragment": "Netherite Fragment",
+
 	"enchantment.mining_dims.returning": "Returning (to bed)",
 	"enchantment.mining_dims.returning.desc": "Mining Dimensions: (Teleporter) Sneak + right-click to return to bed"
 }

@@ -29,7 +29,7 @@
       "item": "minecraft:netherite_boots"
     }
   ],
-  "result": "minecraft:netherite_scrap",
+  "result": "mining_dims:netherite_fragment",
   "experience": 0.3,
   "cookingtime": 200
 }

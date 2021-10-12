@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "AAA",
+        "AAA",
+        "AAA"
+    ],
+    
+    "key":
+    {
+        "A":
+        {
+            "item": "mining_dims:netherite_fragment"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:netherite_scrap",
+        "count": 1
+    }
+}

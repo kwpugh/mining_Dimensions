@@ -2,16 +2,18 @@ package com.kwpugh.mining_dims.mixin;
 
 import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
-import net.minecraft.entity.Entity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.world.ServerWorldAccess;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
@@ -33,7 +35,7 @@ public abstract class ZombieEntityMixin extends MobEntity
 	}
 
 	@Inject(method="initEquipment",at=@At("TAIL"),cancellable = true)
-	private void gobberInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
+	private void miningdimsInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
 	{
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
@@ -47,7 +49,7 @@ public abstract class ZombieEntityMixin extends MobEntity
 	}
 
 	@Inject(method="damage",at=@At("HEAD"),cancellable = true)
-	public void gobberDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
+	public void miningdimsApplyAttributeModifiersDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir)
 	{
 		Entity self = (Entity) (Object) this;
 		if(self instanceof ZombieEntity)
