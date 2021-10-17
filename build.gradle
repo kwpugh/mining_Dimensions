@@ -43,13 +43,13 @@ dependencies {
 	// You may need to force-disable transitiveness on them.
 
 	// Cloth Config
-	modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.34") {
+	modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.38") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
 	//Custom Portals
 	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta41-1.17'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta45-1.17'
 }
 
 processResources {

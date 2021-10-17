@@ -47,6 +47,18 @@ public class MiningTeleporter extends Item
         ServerPlayerEntity serverPlayer = (ServerPlayerEntity) player;
 
         RegistryKey<World> currentWorldKey = world.getRegistryKey();
+//        if(currentWorldKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY)
+//        {
+//            destWorld = overWorld;
+//        }
+//        else
+//        {
+//            destWorld = targetWorld;
+//        }
+
+
+
+        // TEST
         if(currentWorldKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY)
         {
             destWorld = overWorld;
@@ -55,6 +67,9 @@ public class MiningTeleporter extends Item
         {
             destWorld = targetWorld;
         }
+        // TEST
+
+
 
         // Check a number of times for a safe spot
         for (int i = 1; i < 6; i++)

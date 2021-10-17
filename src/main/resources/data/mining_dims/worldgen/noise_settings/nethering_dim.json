@@ -2,7 +2,7 @@
   "noise_caves_enabled": true,
   "deepslate_enabled": true,
   "ore_veins_enabled": true,
-  "noodle_caves_enabled": true,
+  "noodle_caves_enabled": false,
   "min_surface_level": 0,
   "disable_mob_generation": true,
   "aquifers_enabled": false,

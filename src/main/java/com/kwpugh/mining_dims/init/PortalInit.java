@@ -1,7 +1,8 @@
 package com.kwpugh.mining_dims.init;
 
 import com.kwpugh.mining_dims.MiningDims;
-import net.kyrptonaught.customportalapi.CustomPortalApiRegistry;
+
+import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 
@@ -12,6 +13,7 @@ public class PortalInit
 	static boolean caving = MiningDims.CONFIG.GENERAL.enableCavingPortal;
 	static boolean nethering = MiningDims.CONFIG.GENERAL.enableNetheringPortal;
 
+
     public static void registerPortal()
     {
     	//  50, 133, 168 = light blue portal color
@@ -21,22 +23,38 @@ public class PortalInit
 
     	if(mining)
     	{
-    		CustomPortalApiRegistry.addPortal(Blocks.COBBLESTONE, new Identifier(MiningDims.MOD_ID, "mining_dim"), 50, 133, 168);
+			CustomPortalBuilder.beginPortal()
+					.frameBlock(Blocks.COBBLESTONE)
+					.destDimID(new Identifier(MiningDims.MOD_ID, "mining_dim"))
+					.tintColor(50, 133, 168)
+					.registerPortal();
     	}
 
     	if(hunting)
     	{
-    		CustomPortalApiRegistry.addPortal(Blocks.OAK_LOG, new Identifier(MiningDims.MOD_ID, "hunting_dim"), 13, 130, 21);
+			CustomPortalBuilder.beginPortal()
+					.frameBlock(Blocks.OAK_LOG)
+					.destDimID(new Identifier(MiningDims.MOD_ID, "hunting_dim"))
+					.tintColor(13, 130, 21)
+					.registerPortal();
     	}
 
 		if(caving)
 		{
-			CustomPortalApiRegistry.addPortal(Blocks.DIORITE, new Identifier(MiningDims.MOD_ID, "caving_dim"), 28, 27, 31);
+			CustomPortalBuilder.beginPortal()
+					.frameBlock(Blocks.DIORITE)
+					.destDimID(new Identifier(MiningDims.MOD_ID, "caving_dim"))
+					.tintColor(28, 27, 31)
+					.registerPortal();
 		}
 
 		if(nethering)
 		{
-			CustomPortalApiRegistry.addPortal(Blocks.BASALT, new Identifier(MiningDims.MOD_ID, "nethering_dim"), 235, 52, 55);
+			CustomPortalBuilder.beginPortal()
+					.frameBlock(Blocks.BASALT)
+					.destDimID(new Identifier(MiningDims.MOD_ID, "nethering_dim"))
+					.tintColor(235, 52, 55)
+					.registerPortal();
 		}
     }
 }
