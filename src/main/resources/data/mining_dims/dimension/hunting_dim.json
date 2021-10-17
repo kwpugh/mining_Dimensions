@@ -34,7 +34,7 @@
       "type": "minecraft:multi_noise"
     },
     "seed": 0,
-    "settings": "minecraft:overworld",
+    "settings": "mining_dims:hunting_dim_noise",
     "type": "minecraft:noise"
   }
 }
