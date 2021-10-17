@@ -113,16 +113,16 @@ public class TeleporterUtil
                 }
 
                 //Let's avoid putting them underground
-                while (y > 60)
+                while (y > 20)
                 {
                     y--;
                     BlockPos groundPos = new BlockPos(x, y - 2, z);
 
                     if (!chunk.getBlockState(groundPos).getMaterial().equals(Material.AIR) &&
                             (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.BEDROCK) &&
-                                    (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.LAVA) &&
-                                            (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.ACACIA_BUTTON) &&
-                                                    (y - 2) > 60))))
+                            (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.LAVA) &&
+                            (!chunk.getBlockState(groundPos).getBlock().equals(Blocks.ACACIA_BUTTON) &&
+                            (y - 2) > 20))))
                     {
                         // If block pos under feet is water or lava, place a stone block
                         if(chunk.getBlockState(groundPos).getMaterial().equals(Material.WATER)) chunk.setBlockState(groundPos, Blocks.STONE.getDefaultState(), false);
