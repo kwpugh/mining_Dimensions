@@ -96,9 +96,9 @@ public class TeleporterUtil
                 Random rand = new Random();
 
                 // Use players current x and z for starting point
-                int x = (int) Math.round(playerLoc.getX()) + rand.nextInt(10 + 5) - 5;
+                int x = Math.round(playerLoc.getX()) + rand.nextInt(10 + 5) - 5;
                 int y = (dimKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY3) ? 325 : 150;
-                int z = (int) Math.round(playerLoc.getZ()) + rand.nextInt(10 + 5) - 5;
+                int z = Math.round(playerLoc.getZ()) + rand.nextInt(10 + 5) - 5;
 
                 Chunk chunk = destWorld.getChunk(x >> 4, z >> 4);
                 Biome biome = destWorld.getBiome(new BlockPos(x, y, z));

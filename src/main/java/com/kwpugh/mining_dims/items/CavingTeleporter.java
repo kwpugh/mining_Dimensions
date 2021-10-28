@@ -1,6 +1,5 @@
 package com.kwpugh.mining_dims.items;
 
-import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.util.TeleporterUtil;
 import net.minecraft.client.item.TooltipContext;
