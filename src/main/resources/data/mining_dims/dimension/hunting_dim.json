@@ -6,26 +6,26 @@
       {
         "parameters": {
           "erosion": [
-            -0.78,
-            -0.375
+            1.0,
+            1.0
           ],
           "depth": 0.0,
           "weirdness": [
-            -1.0,
-            -0.93333334
+            1.0,
+            1.0
           ],
           "offset": 0.0,
           "temperature": [
-            -0.45,
-            -0.15
+            1.0,
+            1.0
           ],
           "humidity": [
-            -1.0,
-            -0.3
+            1.0,
+            1.0
           ],
           "continentalness": [
-            -0.11,
-            0.3
+            1.0,
+            1.0
           ]
         },
         "biome":  "mining_dims:hunting_dim_plains"
