@@ -1,10 +1,10 @@
 {
   "logical_height": 384,
   "infiniburn": "minecraft:infiniburn_overworld",
-  "effects": "minecraft:overworld",
+  "effects": "minecraft:overworld_caves",
   "ambient_light": 0.0,
   "respawn_anchor_works": false,
-  "has_raids": true,
+  "has_raids": false,
   "min_y": -64,
   "height": 384,
   "natural": true,
