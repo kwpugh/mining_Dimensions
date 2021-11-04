@@ -1,0 +1,11 @@
+{
+	"item.mining_dims.mining_teleporter": "Шахтёрский телепортатор",
+	"item.mining_dims.hunting_teleporter": "Охотничий телепортатор",
+	"item.mining_dims.caving_teleporter": "Пещерный телепортатор",
+	"item.mining_dims.nethering_teleporter": "Незеровский телепортатор",
+
+	"item.mining_dims.teleporter1": "Не двигайся, проверка безопасной точки.",
+	"item.mining_dims.teleporter2": "По-прежнему проверяется...",
+	"item.mining_dims.teleporter3": "Не успешно, попробуй снова в другой точке.",
+	"item.mining_dims.teleporter.desc": "Переносное устройство телепортации."
+}
