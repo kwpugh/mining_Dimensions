@@ -619,7 +619,7 @@
       },
       {
         "result_state": {
-          "Name": "minecraft:netherrack"
+          "Name": "minecraft:stone"
         },
         "type": "minecraft:block"
       }
