@@ -11,7 +11,7 @@
     "AbstractSkeletonEntityMixin",
     "WitherSkeletonEntityMixin",
     "GoatEntityMixin",
-    "DefaultBiomeFeaturesMixin",
+
     "AnvilScreenHandlerMixin",
     "ForgingScreenHandlerAccessor",
     "LivingEntityMixinDrops"
