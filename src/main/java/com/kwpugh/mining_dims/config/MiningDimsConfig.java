@@ -59,6 +59,16 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         @Comment("\n"
                 + "\n"
                 + "***********************"
+                + "\nExtra Nether Ores"
+                + "\n (Also affects the Nethering Dim)"
+                + "\n***********************")
+        public int extraAncientDebrisVeinSize = 3;
+        public int extraAncientDebrisVeinsPerChunk = 8;
+        public int extraAncientDebrisMaxHeight = 40;
+
+        @Comment("\n"
+                + "\n"
+                + "***********************"
                 + "\nHunting Dim Mobs"
                 + "\n - settings for mob attributes"
                 + "\n***********************")

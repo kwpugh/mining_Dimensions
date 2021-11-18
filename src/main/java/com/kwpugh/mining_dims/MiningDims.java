@@ -5,6 +5,8 @@ import com.kwpugh.mining_dims.init.EnchantmentInit;
 import com.kwpugh.mining_dims.init.ItemInit;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.init.PortalInit;
+import com.kwpugh.mining_dims.world.MiningDimsOreConfiguredFeature;
+import com.kwpugh.mining_dims.world.MiningDimsOrePlacedFeature;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -34,6 +36,7 @@ public class MiningDims implements ModInitializer
         MiningDimsRegistry.setupDimension();
         ItemInit.init();
         EnchantmentInit.registerEnchantments();
-//        OreGen.Features();
+        MiningDimsOreConfiguredFeature.init();
+        MiningDimsOrePlacedFeature.init();
     }	
 }
