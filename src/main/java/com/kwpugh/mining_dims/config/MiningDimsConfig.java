@@ -52,6 +52,7 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
                 + "\nExtra Overworld Deepslate Ores"
                 + "\n (Also affects the Mining, Climbing, & Caving Dims)"
                 + "\n***********************")
+        public boolean enableExtraDiamond = true;
         public int extraDiamondDeepslateVeinSize = 3;
         public int extraDiamondDeepslateVeinsPerChunk = 8;
         public int extraDiamondDeepslateMaxHeight = -50;
@@ -62,6 +63,7 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
                 + "\nExtra Nether Ores"
                 + "\n (Also affects the Nethering Dim)"
                 + "\n***********************")
+        public boolean enableExtraAncientDebris = true;
         public int extraAncientDebrisVeinSize = 3;
         public int extraAncientDebrisVeinsPerChunk = 8;
         public int extraAncientDebrisMaxHeight = 40;

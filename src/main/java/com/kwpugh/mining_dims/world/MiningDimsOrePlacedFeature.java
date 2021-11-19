@@ -19,35 +19,34 @@ public class MiningDimsOrePlacedFeature
 {
     public static final MiningDimsConfig.General CONFIG = MiningDims.CONFIG.GENERAL;
 
-
     // OVERWORLD ORES
-    public static final PlacedFeature ORE_EXTRA_DIAMOND_DEEPSLATE = MiningDimsOreConfiguredFeature
-            .ORE_EXTRA_DIAMOND_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.extraDiamondDeepslateVeinsPerChunk,
-                    HeightRangePlacementModifier.uniform(YOffset.fixed(-64),YOffset.fixed(CONFIG.extraDiamondDeepslateMaxHeight))));
+    public static final PlacedFeature ORE_EXTRA_DIAMOND_DEEPSLATE = MiningDimsOreConfiguredFeature.ORE_EXTRA_DIAMOND_DEEPSLATE.withPlacement(modifiersWithCount(CONFIG.extraDiamondDeepslateVeinsPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(-64),YOffset.fixed(CONFIG.extraDiamondDeepslateMaxHeight))));
 
     // NETHER ORES
-    public static final PlacedFeature ORE_EXTRA_ANCIENT_DEBRIS = MiningDimsOreConfiguredFeature
-            .ORE_EXTRA_ANCIENT_DEBRIS.withPlacement(modifiersWithCount(CONFIG.extraAncientDebrisVeinsPerChunk,
-                    HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(CONFIG.extraAncientDebrisMaxHeight))));
-
+    public static final PlacedFeature ORE_EXTRA_ANCIENT_DEBRIS = MiningDimsOreConfiguredFeature.ORE_EXTRA_ANCIENT_DEBRIS.withPlacement(modifiersWithCount(CONFIG.extraAncientDebrisVeinsPerChunk, HeightRangePlacementModifier.uniform(YOffset.fixed(0),YOffset.fixed(CONFIG.extraAncientDebrisMaxHeight))));
 
 
     public static void init()
     {
         // OVERWORLD ORES
-        RegistryKey<PlacedFeature> extraDiamondDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-                new Identifier(MiningDims.MOD_ID, "ore_extra_diamond_deepslate"));
+        RegistryKey<PlacedFeature> extraDiamondDeepslate = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MiningDims.MOD_ID, "ore_extra_diamond_deepslate"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, extraDiamondDeepslate.getValue(), ORE_EXTRA_DIAMOND_DEEPSLATE);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, extraDiamondDeepslate);
 
         // NETHER ORES
-        RegistryKey<PlacedFeature> extraAncientDebris = RegistryKey.of(Registry.PLACED_FEATURE_KEY,
-                new Identifier(MiningDims.MOD_ID, "ore_extra_ancient_debris"));
+        RegistryKey<PlacedFeature> extraAncientDebris = RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MiningDims.MOD_ID, "ore_extra_ancient_debris"));
         Registry.register(BuiltinRegistries.PLACED_FEATURE, extraAncientDebris.getValue(), ORE_EXTRA_ANCIENT_DEBRIS);
-        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, extraAncientDebris);
+
+
+        if(CONFIG.enableExtraDiamond)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, extraDiamondDeepslate);
+        }
+
+        if(CONFIG.enableExtraAncientDebris)
+        {
+            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, extraAncientDebris);
+        }
     }
-
-
 
 
     // Just in here until accessors are added to Fabric
