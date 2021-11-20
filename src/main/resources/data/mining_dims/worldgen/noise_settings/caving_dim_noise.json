@@ -622,6 +622,28 @@
           "Name": "minecraft:stone"
         },
         "type": "minecraft:block"
+      },
+      {
+        "if_true": {
+          "random_name": "minecraft:deepslate",
+          "true_at_and_below": {
+            "absolute": 0
+          },
+          "false_at_and_above": {
+            "absolute": 8
+          },
+          "type": "minecraft:vertical_gradient"
+        },
+        "then_run": {
+          "result_state": {
+            "Properties": {
+              "axis": "y"
+            },
+            "Name": "minecraft:deepslate"
+          },
+          "type": "minecraft:block"
+        },
+        "type": "minecraft:condition"
       }
     ],
     "type": "minecraft:sequence"
@@ -754,6 +776,6 @@
     "height": 384
   },
   "default_block": {
-    "Name": "minecraft:stone"
+    "Name": "minecraft:deepslate"
   }
 }
