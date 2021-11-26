@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class MiningTeleporter extends Item
+public class MiningTeleporter extends BaseTeleporter
 {
     public MiningTeleporter(Item.Settings settings)
     {

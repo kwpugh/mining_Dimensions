@@ -4,16 +4,17 @@
   "package": "com.kwpugh.mining_dims.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ZombieEntityMixin",
+    "AbstractSkeletonEntityMixin",
+    "AnvilScreenHandlerMixin",
+    "EnchantmentTargetMixin",
+    "ForgingScreenHandlerAccessor",
+    "GoatEntityMixin",
+    "LivingEntityMixinDrops",
     "PiglinEntityMixin",
     "PiglinBruteEntityMixin",
     "VexEntityMixin",
-    "AbstractSkeletonEntityMixin",
     "WitherSkeletonEntityMixin",
-    "GoatEntityMixin",
-    "AnvilScreenHandlerMixin",
-    "ForgingScreenHandlerAccessor",
-    "LivingEntityMixinDrops"
+    "ZombieEntityMixin"
   ],
   "client": [
   ],

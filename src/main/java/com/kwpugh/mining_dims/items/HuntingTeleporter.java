@@ -1,6 +1,5 @@
 package com.kwpugh.mining_dims.items;
 
-import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.util.TeleporterUtil;
 import net.minecraft.client.item.TooltipContext;
@@ -17,7 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class HuntingTeleporter extends Item
+public class HuntingTeleporter extends BaseTeleporter
 {
     public HuntingTeleporter(Item.Settings settings)
     {

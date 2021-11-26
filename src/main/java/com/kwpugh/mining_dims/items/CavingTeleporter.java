@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class CavingTeleporter extends Item
+public class CavingTeleporter extends BaseTeleporter
 {
     public CavingTeleporter(Item.Settings settings)
     {
