@@ -41,8 +41,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//Custom Portals
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta46v2-1.18'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta46v2-1.18'
+	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta47-1.18'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta47-1.18'
 
 	// Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig}") {
