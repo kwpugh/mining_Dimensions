@@ -12,6 +12,7 @@
     "LivingEntityMixinDrops",
     "PiglinEntityMixin",
     "PiglinBruteEntityMixin",
+    "SpawnRestrictionMixin",
     "VexEntityMixin",
     "WitherSkeletonEntityMixin",
     "ZombieEntityMixin"
