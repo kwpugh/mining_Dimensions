@@ -3,8 +3,12 @@ package com.kwpugh.mining_dims.init;
 import com.kwpugh.mining_dims.MiningDims;
 
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class PortalInit
 {
@@ -20,12 +24,13 @@ public class PortalInit
     	//  13, 130, 21 = green portal
 		//  28, 27, 31 = black portal
 		//  235, 52, 55 = red portal
-		//  235, 208, 52 = yellowish portal
+		//  233, 171, 255 = purple'ish portal
 
 		if(mining)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.DEEPSLATE)
+					.frameBlock(BlockInit.MINING_PORTAL_BLOCK)
+					.lightWithItem(ItemInit.FLINT_AND_DIAMOND)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "mining_dim"))
 					.tintColor(50, 133, 168)
 					.registerPortal();
@@ -34,7 +39,8 @@ public class PortalInit
 		if(hunting)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.OAK_LOG)
+					.frameBlock(BlockInit.HUNTING_PORTAL_BLOCK)
+					.lightWithItem(ItemInit.FLINT_AND_DIAMOND)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "hunting_dim"))
 					.tintColor(13, 130, 21)
 					.registerPortal();
@@ -43,7 +49,8 @@ public class PortalInit
 		if(caving)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.TUFF)
+					.frameBlock(BlockInit.CAVING_PORTAL_BLOCK)
+					.lightWithItem(ItemInit.FLINT_AND_DIAMOND)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "caving_dim"))
 					.tintColor(28, 27, 31)
 					.registerPortal();
@@ -52,7 +59,8 @@ public class PortalInit
 		if(nethering)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.BASALT)
+					.frameBlock(BlockInit.NETHERING_PORTAL_BLOCK)
+					.lightWithItem(ItemInit.FLINT_AND_DIAMOND)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "nethering_dim"))
 					.tintColor(235, 52, 55)
 					.registerPortal();
@@ -61,9 +69,10 @@ public class PortalInit
 		if(climbing)
 		{
 			CustomPortalBuilder.beginPortal()
-					.frameBlock(Blocks.SNOW_BLOCK)
+					.frameBlock(BlockInit.CLIMBING_PORTAL_BLOCK)
+					.lightWithItem(ItemInit.FLINT_AND_DIAMOND)
 					.destDimID(new Identifier(MiningDims.MOD_ID, "climbing_dim"))
-					.tintColor(235, 208, 52)
+					.tintColor(233, 171, 255)
 					.registerPortal();
 		}
     }

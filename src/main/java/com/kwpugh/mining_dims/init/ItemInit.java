@@ -20,6 +20,8 @@ public class ItemInit
     public static final Item NETHERING_TELEPORTER = new NetheringTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
     public static final Item HUNTING_TELEPORTER = new HuntingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
 
+    public static final Item FLINT_AND_DIAMOND = new Item(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
+
     public static final Item DIAMOND_NUGGET = new Item((new Item.Settings()).maxCount(64).group(MiningDims.MINING_DIMS_GROUP));
     public static final Item NETHERITE_FRAGMENT = new Item((new Item.Settings()).maxCount(64).group(MiningDims.MINING_DIMS_GROUP));
 
@@ -52,5 +54,7 @@ public class ItemInit
 
         Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "diamond_nugget"), DIAMOND_NUGGET);
         Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "netherite_fragment"), NETHERITE_FRAGMENT);
+
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "flint_and_diamond"), FLINT_AND_DIAMOND);
     }
 }

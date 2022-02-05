@@ -22,6 +22,7 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         public boolean enableCavingPortal = true;
         public boolean enableNetheringPortal = true;
         public boolean enableClimbingPortal = true;
+        public boolean useFlintAndDiamond = false;
 
         @Comment("\n"
                 + "\n"

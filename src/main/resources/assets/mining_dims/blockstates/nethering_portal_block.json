@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "mining_dims:block/nethering_portal_block" }
+    }
+}

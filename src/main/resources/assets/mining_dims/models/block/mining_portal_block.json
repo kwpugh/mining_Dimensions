@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_all",
+	"textures":
+	{
+		"all": "mining_dims:block/mining_portal_block"
+	}
+}

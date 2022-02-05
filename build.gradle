@@ -17,6 +17,8 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
+	mavenLocal()  // For Pughlib
+
 	maven {
 		url = 'https://maven.fabricmc.net/io/github/prospector/modmenu/'
 	}
@@ -53,6 +55,10 @@ dependencies {
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.roughlyenoughitems}"
 	modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${project.roughlyenoughitems}"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.roughlyenoughitems}"
+
+	//Pughlib for common mixin
+	include "com.kwpugh:pugh_lib_fabric_1.18.1:1.2.15"
+	modImplementation "com.kwpugh:pugh_lib_fabric_1.18.1:1.2.15"
 }
 
 processResources {

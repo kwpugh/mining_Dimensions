@@ -2,6 +2,7 @@ package com.kwpugh.mining_dims.items;
 
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.util.TeleporterUtil;
+import com.kwpugh.pugh_lib.api.CustomRecipeRemainder;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

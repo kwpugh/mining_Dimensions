@@ -1,10 +1,7 @@
 package com.kwpugh.mining_dims;
 
 import com.kwpugh.mining_dims.config.MiningDimsConfig;
-import com.kwpugh.mining_dims.init.EnchantmentInit;
-import com.kwpugh.mining_dims.init.ItemInit;
-import com.kwpugh.mining_dims.init.MiningDimsRegistry;
-import com.kwpugh.mining_dims.init.PortalInit;
+import com.kwpugh.mining_dims.init.*;
 import com.kwpugh.mining_dims.world.MiningDimsOreConfiguredFeature;
 import com.kwpugh.mining_dims.world.MiningDimsOrePlacedFeature;
 import net.fabricmc.api.ModInitializer;
@@ -32,9 +29,11 @@ public class MiningDims implements ModInitializer
     @Override
     public void onInitialize()
     {
+        BlockInit.registerBlocks();
+        BlockInit.registerBlockItems();
+        ItemInit.init();
         PortalInit.registerPortal();
         MiningDimsRegistry.setupDimension();
-        ItemInit.init();
         EnchantmentInit.registerEnchantments();
         MiningDimsOreConfiguredFeature.init();
         MiningDimsOrePlacedFeature.init();
