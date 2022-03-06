@@ -4,8 +4,6 @@ import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.EnchantmentInit;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensions;
-import net.fabricmc.fabric.api.tag.FabricDataGeneratorTagBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,10 +19,12 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.TeleportTarget;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.chunk.Chunk;
 
 import java.util.Random;
@@ -114,15 +114,13 @@ public class TeleporterUtil
                 int z = Math.round(playerLoc.getZ()) + rand.nextInt(10 + 5) - 5;
 
                 Chunk chunk = destWorld.getChunk(x >> 4, z >> 4);
-                Biome biome = destWorld.getBiome(new BlockPos(x, y, z));
 
-                //Let's not dump the player in the middle of a body of water, shall we? Unless they really want it.
-                if (MiningDims.CONFIG.GENERAL.enableOceanCheck)
+                RegistryEntry<Biome> registryEntry = world.getBiome(new BlockPos(x, y, z));
+                if (registryEntry.matchesKey(BiomeKeys.OCEAN) ||
+                        registryEntry.matchesKey(BiomeKeys.RIVER) ||
+                        registryEntry.matchesKey(BiomeKeys.BEACH))
                 {
-                    if((biome.getCategory().getName().equals("ocean")))
-                    {
-                        continue;
-                    }
+                    continue;
                 }
 
                 //Let's avoid putting them underground

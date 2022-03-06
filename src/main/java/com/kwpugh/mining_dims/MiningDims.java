@@ -4,14 +4,14 @@ import com.kwpugh.mining_dims.config.MiningDimsConfig;
 import com.kwpugh.mining_dims.init.*;
 import com.kwpugh.mining_dims.world.MiningDimsOreConfiguredFeature;
 import com.kwpugh.mining_dims.world.MiningDimsOrePlacedFeature;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 
 public class MiningDims implements ModInitializer
 {
