@@ -42,9 +42,13 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Custom Portals
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta50-1.18'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta50-1.18'
+	//Custom Portals - Local Maven
+	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta50-22w12a'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta50-22w12a'
+
+//	//Custom Portals
+	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta50-1.19snapshot'
+	include 'net.kyrptonaught:customportalapi:0.0.1-beta50-1.19snapshot'
 
 	// Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig}") {
