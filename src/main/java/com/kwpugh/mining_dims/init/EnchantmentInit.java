@@ -10,15 +10,10 @@ import net.minecraft.util.registry.Registry;
 
 public class EnchantmentInit
 {
-    static boolean returning = MiningDims.CONFIG.GENERAL.enableReturningEnchantment;
-
     public static final Enchantment RETURNING = new ReturningEnchantment(Enchantment.Rarity.COMMON, EnchantmentTarget.WEARABLE, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
 
     public static void registerEnchantments()
     {
-        if(returning)
-        {
-            Registry.register(Registry.ENCHANTMENT, new Identifier(MiningDims.MOD_ID, "returning"), RETURNING);
-        }
+        Registry.register(Registry.ENCHANTMENT, new Identifier(MiningDims.MOD_ID, "returning"), RETURNING);
     }
 }

@@ -2,13 +2,11 @@ package com.kwpugh.mining_dims.items;
 
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
 import com.kwpugh.mining_dims.util.TeleporterUtil;
-import com.kwpugh.pugh_lib.api.CustomRecipeRemainder;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -38,6 +36,6 @@ public class CavingTeleporter extends BaseTeleporter
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext)
     {
-        tooltip.add(new TranslatableText("item.mining_dims.teleporter.desc").formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("item.mining_dims.teleporter.desc").formatted(Formatting.GREEN));
     }
 }

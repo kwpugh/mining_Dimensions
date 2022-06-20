@@ -8,12 +8,6 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemInit
 {
-    static boolean mining = MiningDims.CONFIG.GENERAL.enableMiningTeleporter;
-    static boolean caving = MiningDims.CONFIG.GENERAL.enableCavingTeleporter;
-    static boolean climbing = MiningDims.CONFIG.GENERAL.enableClimbingTeleporter;
-    static boolean nethering = MiningDims.CONFIG.GENERAL.enableNetheringTeleporter;
-    static boolean hunting = MiningDims.CONFIG.GENERAL.enableHuntingTeleporter;
-
     public static final Item MINING_TELEPORTER = new MiningTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
     public static final Item CAVING_TELEPORTER = new CavingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
     public static final Item CLIMBING_TELEPORTER = new ClimbingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
@@ -27,30 +21,11 @@ public class ItemInit
 
     public static void init()
     {
-        if(mining)
-        {
-            Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "mining_teleporter"), MINING_TELEPORTER);
-        }
-
-        if(caving)
-        {
-            Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "caving_teleporter"), CAVING_TELEPORTER);
-        }
-
-        if(climbing)
-        {
-            Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "climbing_teleporter"), CLIMBING_TELEPORTER);
-        }
-
-        if(nethering)
-        {
-            Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "nethering_teleporter"), NETHERING_TELEPORTER);
-        }
-
-        if(hunting)
-        {
-            Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "hunting_teleporter"), HUNTING_TELEPORTER);
-        }
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "mining_teleporter"), MINING_TELEPORTER);
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "caving_teleporter"), CAVING_TELEPORTER);
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "climbing_teleporter"), CLIMBING_TELEPORTER);
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "nethering_teleporter"), NETHERING_TELEPORTER);
+        Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "hunting_teleporter"), HUNTING_TELEPORTER);
 
         Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "diamond_nugget"), DIAMOND_NUGGET);
         Registry.register(Registry.ITEM, new Identifier(MiningDims.MOD_ID, "netherite_fragment"), NETHERITE_FRAGMENT);

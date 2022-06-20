@@ -41,18 +41,11 @@ public class MiningDimsOrePlacedFeature
         RegistryKey<PlacedFeature> extraDiamondDeepslate = ORE_EXTRA_DIAMOND_DEEPSLATE.getKey().get();
         RegistryKey<PlacedFeature> extraAncientDebris = ORE_EXTRA_ANCIENT_DEBRIS.getKey().get();
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+        GenerationStep.Feature.UNDERGROUND_ORES, extraDiamondDeepslate);
 
-        if(CONFIG.enableExtraDiamond)
-        {
-            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
-            GenerationStep.Feature.UNDERGROUND_ORES, extraDiamondDeepslate);
-        }
-
-        if(CONFIG.enableExtraAncientDebris)
-        {
-            BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-            GenerationStep.Feature.UNDERGROUND_ORES, extraAncientDebris);
-        }
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
+        GenerationStep.Feature.UNDERGROUND_ORES, extraAncientDebris);
     }
 
     // Used here because the vanilla ones are private

@@ -15,45 +15,9 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
         @Comment("\n"
                 + "\n"
                 + "***********************"
-                + "\nPortals"
-                + "\n***********************")
-        public boolean enableMiningPortal = true;
-        public boolean enableHuntingPortal = true;
-        public boolean enableCavingPortal = true;
-        public boolean enableNetheringPortal = true;
-        public boolean enableClimbingPortal = true;
-        public boolean useFlintAndDiamond = false;
-
-        @Comment("\n"
-                + "\n"
-                + "***********************"
-                + "\nPortable Teleporters"
-                + "\n***********************")
-        public boolean enableMiningTeleporter = true;
-        public boolean enableHuntingTeleporter = true;
-        public boolean enableCavingTeleporter = true;
-        public boolean enableNetheringTeleporter = true;
-        public boolean enableClimbingTeleporter = true;
-        public boolean enableReturningEnchantment = true;
-
-        @Comment("\n"
-                + "\n"
-                + "***********************"
-                + "\nTeleporters"
-                + "\n * disable check and place player"
-                + "\n possibly in middle of an ocean on"
-                + "\n a stone block."
-                + "\n * be sure to be carrying a boat!"
-                + "\n***********************")
-        public boolean enableOceanCheck = true;
-
-        @Comment("\n"
-                + "\n"
-                + "***********************"
                 + "\nExtra Overworld Deepslate Ores"
                 + "\n (Also affects the Mining, Climbing, & Caving Dims)"
                 + "\n***********************")
-        public boolean enableExtraDiamond = true;
         public int extraDiamondDeepslateVeinSize = 3;
         public int extraDiamondDeepslateVeinsPerChunk = 8;
         public int extraDiamondDeepslateMaxHeight = -50;
@@ -64,7 +28,6 @@ public class MiningDimsConfig extends PartitioningSerializer.GlobalData
                 + "\nExtra Nether Ores"
                 + "\n (Also affects the Nethering Dim)"
                 + "\n***********************")
-        public boolean enableExtraAncientDebris = true;
         public int extraAncientDebrisVeinSize = 3;
         public int extraAncientDebrisVeinsPerChunk = 8;
         public int extraAncientDebrisMaxHeight = 40;

@@ -2,6 +2,7 @@ package com.kwpugh.mining_dims.mixin;
 
 import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
+import net.minecraft.util.math.random.Random;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -35,7 +36,7 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
 	}
 
 	@Inject(method="initEquipment",at=@At("TAIL"),cancellable = true)
-    private void miningDimsInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
+    private void miningDimsInitEquipment(Random random, LocalDifficulty difficulty, CallbackInfo ci)
     {
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
@@ -55,7 +56,7 @@ public abstract class PiglinEntityMixin extends AbstractPiglinEntity implements 
     public void miningdimsApplyAttributeModifiersInitialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityTag, CallbackInfoReturnable<EntityData> cir)
     {
     	this.miningdimsApplyAttributeModifiersApplyAttributeModifiers();
-    	this.updateEnchantments(difficulty);
+    	this.updateEnchantments(random, difficulty);
     }
 
     private void miningdimsApplyAttributeModifiersApplyAttributeModifiers()

@@ -31,7 +31,7 @@ public abstract class LivingEntityMixinDrops extends Entity
     {
         if(!this.world.isClient)
         {
-            Random random = world.random;
+            Random random = new Random();
 
             if (adversary instanceof PlayerEntity)
             {

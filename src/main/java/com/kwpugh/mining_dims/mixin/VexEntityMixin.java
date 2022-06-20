@@ -2,6 +2,7 @@ package com.kwpugh.mining_dims.mixin;
 
 import com.kwpugh.mining_dims.MiningDims;
 import com.kwpugh.mining_dims.init.MiningDimsRegistry;
+import net.minecraft.util.math.random.Random;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -26,7 +27,7 @@ public abstract class VexEntityMixin extends HostileEntity
 	}
 
 	@Inject(method="initEquipment",at=@At("TAIL"),cancellable = true)
-	private void miningDimsInitEquipment(LocalDifficulty difficulty, CallbackInfo ci)
+	private void miningDimsInitEquipment(Random random, LocalDifficulty difficulty, CallbackInfo ci)
 	{
 		RegistryKey<World> registryKey = world.getRegistryKey();
 		if(registryKey == MiningDimsRegistry.MININGDIMS_WORLD_KEY2)
