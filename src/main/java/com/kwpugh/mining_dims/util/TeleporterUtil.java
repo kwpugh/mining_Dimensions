@@ -50,7 +50,6 @@ public class TeleporterUtil
                 serverPlayer.stopRiding();
 
                 serverPlayer.teleport(serverWorld, bedLoc.getX() + 0.5F, bedLoc.getY(), bedLoc.getZ() + 0.5F, serverPlayer.getYaw(), serverPlayer.getPitch());
-                //world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
                 world.playSound((PlayerEntity)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
                 player.sendMessage((Text.translatable("item.mining_dims.teleporter4")), true);   //Welcome Home!
@@ -86,11 +85,8 @@ public class TeleporterUtil
             assert destWorld != null;
             RegistryKey<World> destKey = destWorld.getRegistryKey();
 
-
             heightMax = getHeightMax(destKey);
             heightMin = getHeightMin(destKey);
-
-
 
             // Check a number of times for a safe spot
             for (int i = 1; i < 6; i++)
@@ -141,22 +137,13 @@ public class TeleporterUtil
                             if (chunk.getBlockState(headPos).getMaterial() == Material.AIR)
                             {
                                 serverPlayer.stopRiding();
-                                //serverPlayer.teleport(destWorld, x, y, z, serverPlayer.getYaw(), serverPlayer.getPitch());
 
-
-
-                                // TEST CODE
                                 Vec3d destVec = new Vec3d(x, y, z);
                                 TeleportTarget teleportTarget = new TeleportTarget(destVec, null, player.getYaw(), player.getPitch());
                                 FabricDimensions.teleport(serverPlayer, destWorld, teleportTarget);
-                                // TEST CODE
-
-
-
 
                                 serverPlayer.fallDistance = 0.0F;
-                                //world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
-                                world.playSound((PlayerEntity)null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
+                                world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
                                 return TypedActionResult.success(stack);
                             }
