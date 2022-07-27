@@ -56,17 +56,17 @@ dependencies {
 	}
 
 	//Pughlib for common mixin
-	include "com.kwpugh:pugh_lib_fabric_1.19:1.4.8"
-	modImplementation "com.kwpugh:pugh_lib_fabric_1.19:1.4.8"
+	include "com.kwpugh:pugh_lib_fabric_1.19:${project.pugh_lib}"
+	modImplementation "com.kwpugh:pugh_lib_fabric_1.19:${project.pugh_lib}"
 
 	//REI
 //	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.roughlyenoughitems}"
 //	modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${project.roughlyenoughitems}"
 //	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${project.roughlyenoughitems}"
 
-	modImplementation ("com.terraformersmc:modmenu:3.1.0") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
+//	modImplementation ("com.terraformersmc:modmenu:${project.modmenu}") {
+//		exclude(group: "net.fabricmc.fabric-api")
+//	}
 }
 
 processResources {
