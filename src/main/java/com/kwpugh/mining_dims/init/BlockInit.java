@@ -11,11 +11,11 @@ import net.minecraft.util.registry.Registry;
 
 public class BlockInit
 {
-    public static final Block MINING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-    public static final Block HUNTING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-    public static final Block CAVING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-    public static final Block NETHERING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
-    public static final Block CLIMBING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0F, 3.0F));
+    public static final Block MINING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F, 2.0F));
+    public static final Block HUNTING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F, 2.0F));
+    public static final Block CAVING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F, 2.0F));
+    public static final Block NETHERING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F, 2.0F));
+    public static final Block CLIMBING_PORTAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(2.0F, 2.0F));
 
     public static void registerBlocks()
     {
