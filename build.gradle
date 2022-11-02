@@ -56,8 +56,8 @@ dependencies {
 	}
 
 	//Pughlib for common mixin
-	include "com.kwpugh:pugh_lib_fabric_1.19:${project.pugh_lib}"
-	modImplementation "com.kwpugh:pugh_lib_fabric_1.19:${project.pugh_lib}"
+	include "com.kwpugh:pugh_lib_fabric_22w43a:${project.pugh_lib}"
+	modImplementation "com.kwpugh:pugh_lib_fabric_22w43a:${project.pugh_lib}"
 
 	//REI
 //	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.roughlyenoughitems}"

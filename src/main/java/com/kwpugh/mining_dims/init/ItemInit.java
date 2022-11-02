@@ -8,16 +8,16 @@ import net.minecraft.util.registry.Registry;
 
 public class ItemInit
 {
-    public static final Item MINING_TELEPORTER = new MiningTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
-    public static final Item CAVING_TELEPORTER = new CavingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
-    public static final Item CLIMBING_TELEPORTER = new ClimbingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
-    public static final Item NETHERING_TELEPORTER = new NetheringTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
-    public static final Item HUNTING_TELEPORTER = new HuntingTeleporter(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item MINING_TELEPORTER = new MiningTeleporter(new Item.Settings().maxCount(1));
+    public static final Item CAVING_TELEPORTER = new CavingTeleporter(new Item.Settings().maxCount(1));
+    public static final Item CLIMBING_TELEPORTER = new ClimbingTeleporter(new Item.Settings().maxCount(1));
+    public static final Item NETHERING_TELEPORTER = new NetheringTeleporter(new Item.Settings().maxCount(1));
+    public static final Item HUNTING_TELEPORTER = new HuntingTeleporter(new Item.Settings().maxCount(1));
 
-    public static final Item FLINT_AND_DIAMOND = new Item(new Item.Settings().maxCount(1).group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item FLINT_AND_DIAMOND = new Item(new Item.Settings().maxCount(1));
 
-    public static final Item DIAMOND_NUGGET = new Item((new Item.Settings()).maxCount(64).group(MiningDims.MINING_DIMS_GROUP));
-    public static final Item NETHERITE_FRAGMENT = new Item((new Item.Settings()).maxCount(64).group(MiningDims.MINING_DIMS_GROUP));
+    public static final Item DIAMOND_NUGGET = new Item((new Item.Settings()).maxCount(64));
+    public static final Item NETHERITE_FRAGMENT = new Item((new Item.Settings()).maxCount(64));
 
     public static void init()
     {
