@@ -6,7 +6,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 
 public class EnchantmentInit
 {
@@ -14,6 +15,6 @@ public class EnchantmentInit
 
     public static void registerEnchantments()
     {
-        Registry.register(Registry.ENCHANTMENT, new Identifier(MiningDims.MOD_ID, "returning"), RETURNING);
+        Registry.register(Registries.ENCHANTMENT, new Identifier(MiningDims.MOD_ID, "returning"), RETURNING);
     }
 }

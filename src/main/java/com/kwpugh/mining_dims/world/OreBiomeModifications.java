@@ -3,10 +3,10 @@ package com.kwpugh.mining_dims.world;
 import com.kwpugh.mining_dims.MiningDims;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
-import net.minecraft.tag.BiomeTags;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BiomeTags;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.placementmodifier.*;
 
@@ -19,8 +19,8 @@ public class OreBiomeModifications
     public static void init()
     {
         // insert into biomes using biome tags
-        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MiningDims.MOD_ID, "ore_extra_diamond_deepslate")));
-        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(Registry.PLACED_FEATURE_KEY, new Identifier(MiningDims.MOD_ID, "ore_extra_ancient_debris")));
+        BiomeModifications.addFeature(overworldSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MiningDims.MOD_ID, "ore_extra_diamond_deepslate")));
+        BiomeModifications.addFeature(netherSelector(), GenerationStep.Feature.UNDERGROUND_ORES, RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(MiningDims.MOD_ID, "ore_extra_ancient_debris")));
     }
 
     public static Predicate<BiomeSelectionContext> overworldSelector()

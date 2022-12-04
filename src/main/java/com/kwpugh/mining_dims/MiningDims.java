@@ -28,7 +28,7 @@ public class MiningDims implements ModInitializer
         BlockInit.registerBlocks();
         BlockInit.registerBlockItems();
         ItemInit.init();
-        PortalInit.registerPortal();
+        //PortalInit.registerPortal();
         MiningDimsGroup.addGroup();
         MiningDimsRegistry.setupDimension();
         EnchantmentInit.registerEnchantments();

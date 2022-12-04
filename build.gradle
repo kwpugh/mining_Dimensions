@@ -46,9 +46,9 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//Custom Portals
-	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta54-1.19'
-	include 'net.kyrptonaught:customportalapi:0.0.1-beta54-1.19'
+//	//Custom Portals
+//	modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta54-1.19'
+//	include 'net.kyrptonaught:customportalapi:0.0.1-beta54-1.19'
 
 	// Cloth Config
 	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig}") {
@@ -56,8 +56,8 @@ dependencies {
 	}
 
 	//Pughlib for common mixin
-	include "com.kwpugh:pugh_lib_fabric_22w43a:${project.pugh_lib}"
-	modImplementation "com.kwpugh:pugh_lib_fabric_22w43a:${project.pugh_lib}"
+	include "com.kwpugh:pugh_lib_fabric_1.19.3:${project.pugh_lib}"
+	modImplementation "com.kwpugh:pugh_lib_fabric_1.19.3:${project.pugh_lib}"
 
 	//REI
 //	modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.roughlyenoughitems}"
