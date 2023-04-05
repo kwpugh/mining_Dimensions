@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:the_nether",
+  "type": "mining_dims:nethering_dim",
   "generator": {
     "biome_source": {
       "biomes": [
