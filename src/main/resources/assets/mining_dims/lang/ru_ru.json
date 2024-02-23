@@ -1,0 +1,40 @@
+{
+	"itemGroup.mining_dims.mining_dims_group": "Шахтёрские измерения",
+
+	"item.mining_dims.mining_teleporter": "Телепортатор в шахтёрское измерение",
+	"item.mining_dims.hunting_teleporter": "Телепортатор в охотничье измерение",
+	"item.mining_dims.caving_teleporter": "Телепортатор портала в пещерное измерение",
+	"item.mining_dims.nethering_teleporter": "Телепортатор в измерение преисподней",
+	"item.mining_dims.climbing_teleporter": "Телепортатор в измерение скалозалания",
+
+	"item.mining_dims.teleporter1": "Оставайтесь на месте. Идёт поиск безопасного места",
+	"item.mining_dims.teleporter2": "Все ещё идёт поиск…",
+	"item.mining_dims.teleporter3": "Не удалось найти безопасное место. Повторите попытку в другом месте",
+	"item.mining_dims.teleporter4": "Добро пожаловать домой!",
+	"item.mining_dims.teleporter5": "Сначала установите точку возрождения",
+	"item.mining_dims.teleporter.desc": "Портативное телепортационное устройство",
+	"item.mining_dims.teleporter.desc2": "При приседании + ПКМ возвращает к точке возрождения",
+
+	"item.mining_dims.diamond_nugget": "Осколок алмаза",
+	"item.mining_dims.netherite_fragment": "Незеритовый брусок",
+
+	"item.mining_dims.flint_and_diamond": "Портальная зажигалка",
+
+	"item.mining_dims.mining_portal_block": "Блок портала в шахтёрское измерение",
+	"block.mining_dims.mining_portal_block": "Блок портала в шахтёрское измерение",
+
+	"item.mining_dims.hunting_portal_block": "Блок портала в охотничье измерение",
+	"block.mining_dims.hunting_portal_block": "Блок портала в охотничье измерение",
+
+	"item.mining_dims.caving_portal_block": "Блок портала в пещерное измерение",
+	"block.mining_dims.caving_portal_block": "Блок портала в пещерное измерение",
+
+	"item.mining_dims.nethering_portal_block": "Блок портала в измерение преисподней",
+	"block.mining_dims.nethering_portal_block": "Блок портала в измерение преисподней",
+
+	"item.mining_dims.climbing_portal_block": "Блок портала в измерение скалозалания",
+	"block.mining_dims.climbing_portal_block": "Блок портала в измерение скалозалания",
+
+	"enchantment.mining_dims.returning": "Возвращение (к точке возрождения)",
+	"enchantment.mining_dims.returning.desc": "Позволяет вернуться к своей точке возрождения при приседании + ПКМ"
+}
